@@ -6,7 +6,6 @@
 
 int main(void)
 {	
-	setlocale(LC_ALL, "RUS");
 	#define SIZE 100
 	int n;
 
@@ -17,7 +16,7 @@ int main(void)
 	
 	if (n <= 0 || n > SIZE-2)
 	{
-		printf("N вне диапазона!\n");
+		printf("N out of range!\n");
 		return(0);
 	}
 	
@@ -29,7 +28,7 @@ int main(void)
 	int max = a[0];
 	
 	
-	//Вывод первоначального массива
+	//Output of the original array
 	printf("a = ");
 	for(int i = 0; i < n; i++)
 	{	
@@ -38,20 +37,20 @@ int main(void)
 	printf("\n");
 	
 	
-	//Поиск максимального значения
+	//Finding the maximum value
 	for(int i = 0; i < n; i++)
 	{
 		if (max < a[i]) max = a[i];
 	} 
 
 
-	//Вывод максимального значения
+	//The output of the maximum value
 	printf("max = %d\n", max);
 	
 	
-	//Замена значений равных по модулю максимальному
-	int k = 0;	//число удалённых элементов
-	int sum = 0;	//сумма удалённых элементов
+	//Replacing values equal to the maximum modulus
+	int k = 0;	//number of deleted items
+	int sum = 0;	//the amount of deleted items
 	for(int i = 0; i < n; i++)
 	{
 		while (abs(a[i]) == max && k != n)
@@ -69,17 +68,17 @@ int main(void)
 	}
 	if(k == n)
 	{
-		printf("Все элементы в массиве имеют одно значение\n");
+		printf("All elements in the array have the same value\n");
 		return(0);
 	}
 	
 	
-	//Вывод количества удалённых элементов
+	//Output the number of deleted items
 	printf("k = %d\n", k);
 	printf("sum = %d\n", sum);
 	
 	
-	//Вставка в середину суммы удалённых элементов
+	//Inserting the sum of deleted items in the middle
 	if((n-k) % 2 == 0)
 	{
 		for(int i = 1; i <= (n-k)/2; i++) 
@@ -87,14 +86,14 @@ int main(void)
 			a[n-k-i+1] = a[n-k-i];
 		}
 		a[(n-k+2)/2-1] = sum;
-		//a[(n-k+2)/2] = sum;//ещё один элемент для чётности массива
+		//a[(n-k+2)/2] = sum;//one more element of the parity array
 		k -= 1;
 		//k -= 2;
 		
 	}
 	
 	
-	//Вывод конечного массива
+	//Output of the final array
 	printf("a = ");
 	for(int i = 0; i < n-k; i++)
 	{	

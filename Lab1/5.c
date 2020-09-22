@@ -6,10 +6,7 @@
 
 int main(void)
 {
-	setlocale(LC_ALL, "RUS");
-	
-		
-	int n;
+		int n;
 	float sum = 0, k = 0;
 	
 	
@@ -19,7 +16,7 @@ int main(void)
 	
 	if(n < 1) 
 	{
-		printf("Невозможно выполнить операцию");
+		printf("The operation cannot be performed");
 		return(0);
 	}
 

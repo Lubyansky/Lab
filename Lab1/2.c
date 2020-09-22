@@ -6,9 +6,6 @@
 
 int main(void)
 {
-	setlocale(LC_ALL, "RUS");
-	
-	
 	float a, x, y, z;
 
 
@@ -20,12 +17,12 @@ int main(void)
 	scanf_s("%f", &z);
 
 
-	a = x + y + z; //сумма трех действительных чисел
+	a = x + y + z; //sum of three real numbers
 
 
 	if ( x == y || x == z || y == z )
 	{
-		printf("Веденные числа не подходят по условию задачи");
+		printf("The entered numbers do not match the problem condition");
 		return(0);
 	}
 	

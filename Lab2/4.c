@@ -6,7 +6,6 @@
 
 int main(void)
 {	
-	setlocale(LC_ALL, "RUS");
 	#define SIZE 100
 	int n, m;
 	
@@ -17,7 +16,7 @@ int main(void)
 	
 	if (n <= 0 || n > SIZE || m <= 0 || m > SIZE)
 	{
-		printf("n и/или m вне диапазона!\n");
+		printf("n and / or m out of range!\n");
 		return(0);
 	}
 	
@@ -32,10 +31,10 @@ int main(void)
 			//matrix[i][j]=i+j;
 			//printf("\nmatrix[%d][%d]= %d ", i, j, matrix[i][j]);
 			
-			//Ввод матрицы с клавиатуры
-			printf("[%d][%d]= ", i, j); scanf("%d", &matrix[i][j]); //вводится элемент каждого столбца в одной строке
+			//Entering the matrix using the keyboard
+			printf("[%d][%d]= ", i, j); scanf("%d", &matrix[i][j]); //enter an element of each column in a single row
 			
-			//Поиск столбцов с минимальным и максимальным элементом
+			//Search for columns with the minimum and maximum element
 			if (i == 0 && j == 0)
 			{
 				min = matrix[i][j];
@@ -60,8 +59,8 @@ int main(void)
 	}
 	
 	
-	//printf("\nmin = %d\n", min_c);	//столбец с минимальным элементом
-	//printf("max = %d\n", max_c);	//столбец с максимальным элементом
+	//printf("\nmin = %d\n", min_c);	//column with the minimum element
+	//printf("max = %d\n", max_c);	//column with the maximum element
 	
 	float a[SIZE];
 	
@@ -72,7 +71,7 @@ int main(void)
 		{
 			if(matrix[i][min_c] == max )
 			{	
-				printf("\nМинимальный и максимальный элемент находятся в одном столбце");
+				printf("\nThe minimum and maximum elements are in the same column");
 				return(0);
 			}
 		}
@@ -81,14 +80,14 @@ int main(void)
 	
 	if(min_c == max_c)
 	{
-		printf("\nВсе элементы в матрице равны");
+		printf("\nAll elements in the matrix are equal");
 		return(0);
 	}
 	
 	
 	if (abs(max_c-min_c) == 1)
 	{
-		printf("Между максимальным и минимальным элементом нет столбцов");
+		printf("There are no columns between the maximum and minimum element");
 		return(0);
 	}
 	
@@ -126,7 +125,7 @@ int main(void)
 	}
 	
 	
-	//Вывод массива
+	//Array output
 	printf("\na = ");
 	for(int i = 0; i < abs(max_c-min_c)-1; i++)
 	{	

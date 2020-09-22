@@ -5,10 +5,7 @@
 
 
 int main(void)
-{
-	setlocale(LC_ALL, "RUS");
-	
-	
+{		
 	float a, b, x, y, z;
 
 

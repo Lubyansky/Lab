@@ -6,9 +6,6 @@
 
 int main(void)
 {
-	setlocale(LC_ALL, "RUS");
-	
-	
 	int n;
 	
 	
@@ -18,7 +15,7 @@ int main(void)
 	
 	if(n < 1 || 27 < n) 
 	{
-		printf("Невозможно выполнить операцию");
+		printf("The operation cannot be performed");
 		return(0);
 	}
 	else

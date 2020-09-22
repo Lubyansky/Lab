@@ -31,10 +31,10 @@ int main(void)
 	
 	
 	
-	int bool;	//Истинность чередования
+	int bool;	//The truth of the alternation
 	
 	
-	//Проверка на истинность чередования знаков
+	//Checking for the truth of alternating characters
 	for(int i = 0; i < n-1; i++)
 	{
 		
@@ -45,7 +45,7 @@ int main(void)
 	printf("\nbool = %i\n", bool);
 		
 		
-	//Поиск максимального и минимального значения
+	//Search for maximum and minimum values
 	int max = a[0];
 	int min = a[0];
 	for (int i = 1; i < n; i++)
@@ -58,7 +58,7 @@ int main(void)
 	printf("max = %d\n", max);
 	
 	
-	//Замена значений
+	//Replacing values
 	if (bool == 1)
 	{
 		for (int i = 0; i < n; i++)
@@ -75,7 +75,7 @@ int main(void)
 	}
 	
 	
-	//Вывод массива
+	//Array output
 	printf("a = ");
 	for(int i = 0; i < n; i++)
 	{	

@@ -14,7 +14,7 @@ int main(void)
 	scanf_s("%f", &e);
 	
 
-	s = 1 / (i *(i + 1)); //текущее слагаемое
+	s = 1 / (i *(i + 1)); //the current term
 	sum = sum + s;
 
 	
